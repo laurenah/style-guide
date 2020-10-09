@@ -1,37 +1,146 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  max-width: 100%;
+  border: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.root-1 {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.hasSidebar {
+  padding-left: 250px;
+}
+
+.content {
+  max-width: 1000px;
+  padding: 16px 32px;
+  margin: 0px auto;
+  display: block;
+}
+
+.sidebar {
+  background-color: rgb(245, 245, 245);
+  border: rgb(232, 232, 232) solid;
+  border-width: 0 1px 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0px;
+  width: 250px;
+  overflow: auto;
+}
+
+.sidebarContent {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.list {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.item {
+  color: rgb(51, 51, 51);
+  display: block;
+  margin: 8px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  list-style: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link, .link:link, .link:visited {
+  font-size: inherit;
+  color: rgb(22, 115, 177);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: rgb(33, 151, 230);
+}
+
+.logo {
+  padding: 16px;
+  border-bottom: 1px solid rgb(232, 232, 232);
+}
+
+.logo h1 {
+  color: rbg(51, 51, 51);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+@media (max-width: 600px) {
+  .hasSidebar {
+    padding-left: 0;
+  }
+
+  .sidebar {
+    position: static;
+    width: auto;
+    border-width: 1px 0 0;
+    padding-bottom: 4px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrap {
+  margin-bottom: 32px;
 }
 
-.App-link {
-  color: #61dafb;
+.section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+  color: rgb(51, 51, 51);
+}
+
+.section-header h1 {
+  font-size: 48px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+.footer {
+  display: block;
+  color: rgb(118, 118, 118);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+}
+
+.para {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: rgb(51, 51, 51);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: inherit;
+  line-height: 1.5;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
