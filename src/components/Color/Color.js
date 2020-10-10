@@ -28,19 +28,19 @@ class Color extends React.Component {
     
                 <article>
                     <div className='para'>
-                    <div className='color-grid'>
-                        <div className='color-row'>
-                            {
-                                this.state.colors.map((color, i) => 
-                                    <div className='swatch' key={i}>
-                                        <div className='color' style={{backgroundColor: `#${color}`}}>
-                                            <p><input value={`#${color}`} onChange={(e) => this.handleChange(i, e)}></input></p>
+                        <div className='color-grid'>
+                            <div className='color-row'>
+                                {
+                                    this.state.colors.map((color, i) => 
+                                        <div className='swatch' key={i}>
+                                            <div className='color' style={{backgroundColor: `#${color}`}}>
+                                                <p><input value={`#${color}`} onChange={(e) => this.handleChange(i, e)} spellCheck='false'></input></p>
+                                            </div>
                                         </div>
-                                    </div>
-                                )
-                            }
+                                    )
+                                }
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </article>
             </section>

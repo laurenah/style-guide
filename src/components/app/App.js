@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Color from '../Color';
+import Typography from '../Typography';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
 
             <section>
               <Color />
+
+              <Typography />
             </section>
           </section>
         </section>
@@ -30,7 +33,7 @@ function App() {
 
       <div className='sidebar'> 
         <header className='logo'>
-          <h1>Style Guide</h1>
+          <h1>Stylst</h1>
         </header>
 
         <div>
