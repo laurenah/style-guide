@@ -136,6 +136,27 @@ body {
   line-height: 1.5;
 }
 
+.color-grid {
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.color-row {
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+}
+
+.color {
+  padding: 4rem 0.5rem 0.5rem;
+  background-color: rgb(51, 51, 51);
+  overflow: hidden;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Color from '../Color';
 
 function App() {
   return (
@@ -17,11 +18,7 @@ function App() {
             </article>
 
             <section>
-              <section className='wrap'>
-                <div className='section-header'>
-                  <h2>Colors</h2>
-                </div>
-              </section>
+              <Color />
             </section>
           </section>
         </section>
