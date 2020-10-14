@@ -2,7 +2,10 @@ import React from 'react';
 
 class Typography extends React.Component {
     constructor(props) {
-        super (props);
+        super(props);
+        this.state = ({
+            headers: ['heading', 'body', 'disclaimer', 'error']
+        });
     }
 
     render() {
@@ -15,32 +18,18 @@ class Typography extends React.Component {
                 <article>
                   <div className='para'>
                       <div className='typo-grid'>
-                          <div className='typo-row'>
-                              <h3>Heading</h3>
-                              <p className='heading-demo'>The quick brown fox jumps over the lazy dog</p>
-                          </div>
-
-                          <div className='typo-row'>
-                              <h3>Body</h3>
-                              <p className='body-demo'>The quick brown fox jumps over the lazy dog</p>
-                          </div>
-
-                          <div className='typo-row'>
-                              <h3>Disclaimer</h3>
-                              <p className='disc-demo'>The quick brown fox jumps over the lazy dog</p>
-                          </div>
-
-                          <div className='typo-row'>
-                              <h3>Error</h3>
-                              <p className='error-demo'>The quick brown fox jumps over the lazy dog</p>
-                          </div>
+                        {this.state.headers.map((header, i) =>
+                            <div className='typo-row' key={i}>
+                                <h3>{header[0].toUpperCase() + header.substring(1)}</h3>
+                                <p className={`${header}-demo`}>The quick brown fox jumps over the lazy dog</p>
+                            </div>
+                        )}
                       </div>
                   </div>
                 </article>
               </section>
         )
     }
-
 }
 
 export default Typography;

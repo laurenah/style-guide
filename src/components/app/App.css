@@ -220,7 +220,7 @@ body {
   color: rgb(51, 51, 51);
 }
 
-.disc-demo {
+.disclaimer-demo {
   align-self: center;
   margin: 0px;
   font-size: 0.9rem;
@@ -238,6 +238,43 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   color: #d0453e;
+}
+
+.spacing-grid {
+  min-width: 0px;
+  display: grid;
+}
+
+.spacing-row {
+  min-width: 0px;
+  display: grid;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+}
+
+.spacing-row h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--theme-ui-colors-text, rgb(51, 51, 51));
+}
+
+.spacing-inner {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  color: var(--theme-ui-colors-secondary, rgb(187, 187, 187));
+  background-color: var(--theme-ui-colors-muted, rgb(246, 246, 246));
+  width: 0px;
+}
+
+.ruler {
+  margin: 0px 0.25rem;
+  font-family: "Mono Lisa", Monaco, monospace;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  color: inherit;
 }
 
 @keyframes App-logo-spin {

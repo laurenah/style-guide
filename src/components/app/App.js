@@ -1,29 +1,16 @@
 import React from 'react';
 import './App.css';
-import Color from '../Color';
-import Typography from '../Typography';
+import Foundation from './Foundation';
+import {BrowserRouter, Link, Route} from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="root-1 hasSidebar">
       <main className='content'>
+        
         <section> {/* Interchangeable Content Here */}
-          <section className='wrap'>
-            <div className='section-header'>
-              <h1>Foundation</h1>
-            </div>
-            <article>
-              <div>
-                <p className='para'>Colors, spacing, and typography are the building blocks of the design system and are often referred to as design tokens. Design tokens are named entities that store visual design attributes.</p>
-              </div>
-            </article>
-
-            <section>
-              <Color />
-
-              <Typography />
-            </section>
-          </section>
+          <Route exact path={'/'} component={Foundation} />
         </section>
 
         <footer className='footer'>
@@ -37,16 +24,49 @@ function App() {
         </header>
 
         <div>
-          <div class='sidebarContent'> {/* Routing Goes Here */}
+          <div className='sidebarContent'> {/* Routing Goes Here */}
             <nav>
               <ul className='list'>
                 <li className='item'>
                   <a className='link' href='/'>Foundation</a>
 
                   <ul className='list'>
-                    <li className='item'><a className='link' href='/'>Colors</a></li>
-                    <li className='item'><a className='link' href='/'>Typography</a></li>
-                    <li className='item'><a className='link' href='/'>Spacing</a></li>
+                    <li className='item'>
+                      <Link className='link' to={{
+                        pathname: '/',
+                        hash: '#colors',
+                        state: {
+                          fromSidebar: true,
+                          colors: true,
+                          typo: false,
+                          spacing: false
+                        }
+                      }}>Colors</Link>
+                    </li>
+                    <li className='item'>
+                      <Link className='link' to={{
+                          pathname: '/',
+                          hash: '#typography',
+                          state: {
+                            fromSidebar: true,
+                            colors: false,
+                            typo: true,
+                            spacing: false
+                          }
+                        }}>Typography</Link>
+                    </li>
+                    <li className='item'>
+                      <Link className='link' to={{
+                            pathname: '/',
+                            hash: '#spacing',
+                            state: {
+                              fromSidebar: true,
+                              colors: false,
+                              typo: false,
+                              spacing: true
+                            }
+                          }}>Spacing</Link>
+                    </li>
                   </ul>
                 </li>
 
@@ -87,6 +107,7 @@ function App() {
         </div>
       </div>
     </div>
+    </BrowserRouter>
   );
 }
 
